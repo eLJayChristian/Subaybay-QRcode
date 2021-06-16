@@ -13,19 +13,19 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.subaybay.R;
-import com.example.subaybay.databinding.FragmentAboutusBinding;
+import com.example.subaybay.databinding.FragmentHistoryBinding;
 
-public class SlideshowFragment extends Fragment {
+public class HistoryFragment extends Fragment {
 
-    private AboutusViewModel aboutusViewModel;
-    private FragmentAboutusBinding binding;
+    private HistoryViewModel historyViewModel;
+    private FragmentHistoryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        aboutusViewModel =
-                new ViewModelProvider(this).get(AboutusViewModel.class);
+        historyViewModel =
+                new ViewModelProvider(this).get(HistoryViewModel.class);
 
-        binding = FragmentAboutusBinding.inflate(inflater, container, false);
+        binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
 
