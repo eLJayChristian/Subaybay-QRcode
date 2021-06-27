@@ -65,32 +65,36 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
     private boolean isCredentialSetIn(String firstname, String middlename, String lastname, String birthday,
                                       String region, String province, String city, String barangay){
-
-        if(firstname.equals("")||regexPattern)
+//|| !regexPattern(firstname)
+        if(firstname.equals(""))
             return false;
 
-        else if(middlename.equals("")||regexPattern)
+        else if(middlename.equals(""))
             return false;
 
-        else if(lastname.equals("")||regexPattern)
+        else if(lastname.equals(""))
             return false;
 
         else if(birthday.equals(""))
             return false;
 
-        else if(region.equals("")||regexPattern)
+        else if(region.equals(""))
             return false;
 
-        else if(province.equals("")||regexPattern)
+        else if(province.equals(""))
             return false;
 
-        else if(city.equals("")||regexPattern)
+        else if(city.equals(""))
             return false;
 
-        else if(barangay.equals("")||regexPattern)
+        else if(barangay.equals(""))
             return false;
 
         return true;
+    }
+
+    public boolean regexPattern(String str) {
+        return str.matches( "[A-Z][a-z]*" );
     }
 
     @Override
@@ -106,6 +110,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                 String province = this.province.getText().toString();
                 String city = this.city.getText().toString();
                 String barangay = this.barangay.getText().toString();
+                boolean isVaccinated = this.vaccinated.isChecked();
 
                 boolean isFillup = isCredentialSetIn(firstname,middlename,lastname
                                                     ,birthday,region,province,city,barangay);
@@ -121,17 +126,20 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     intent.putExtra("province",province);
                     intent.putExtra("city",city);
                     intent.putExtra("barangay",barangay);
+                    intent.putExtra("vaccinated", isVaccinated);
 
                     startActivity(intent);
+                    finish();
                 }
                 else {
-                    Toast.makeText(this, "Please complete the form", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Please complete and don't unnecessary numbers in your name", Toast.LENGTH_SHORT).show();
                 }
 
                 break;
             case R.id.BackBtn1:
                 Intent intent = new Intent(this, LogIn.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }

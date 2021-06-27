@@ -1,4 +1,4 @@
-package com.example.subaybay.ui.gallery;
+package com.example.subaybay.ui.setting;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

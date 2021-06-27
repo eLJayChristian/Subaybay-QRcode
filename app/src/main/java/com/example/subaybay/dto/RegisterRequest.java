@@ -3,7 +3,8 @@ package com.example.subaybay.dto;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
+
+import org.joda.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -43,7 +44,7 @@ public class RegisterRequest {
 
     @SerializedName("birthday")
     @Expose
-    private Date birthday;
+    private String birthday;
 
     @SerializedName("mobileNumber")
     @Expose
@@ -51,7 +52,7 @@ public class RegisterRequest {
 
     @SerializedName("vaccinated")
     @Expose
-    private boolean vaccinated;
+    private boolean isVaccinated;
 
     @SerializedName("password")
     @Expose
@@ -59,7 +60,7 @@ public class RegisterRequest {
 
     @SerializedName("admin")
     @Expose
-    private boolean admin;
+    private boolean isAdmin;
 
     @SerializedName("region")
     @Expose
@@ -84,5 +85,6 @@ public class RegisterRequest {
     @SerializedName("path")
     @Expose
     private String path;
+
 
 }

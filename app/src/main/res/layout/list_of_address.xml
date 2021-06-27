@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:id="@+id/cardviewparent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="390dp"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADDRESS: "
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:textColor="#e1ad01"
+            android:fontFamily="@font/fjalla_one"/>
+
+        <TextView
+            android:id="@+id/txtRegion"
+            android:fontFamily="@font/fjalla_one"
+            android:layout_below="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#e1ad01"
+            android:text="dfa: "/>
+
+        <TextView
+            android:id="@+id/txtProvince"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/fjalla_one"
+            android:layout_below="@+id/txtAddress"
+            android:layout_toRightOf="@+id/txtRegion"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#e1ad01"
+            android:text="Hey: "/>
+
+        <TextView
+            android:id="@+id/txtCity"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/fjalla_one"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#e1ad01"
+            android:text="Hey: "
+            android:layout_below="@+id/txtAddress"
+            android:layout_toRightOf="@+id/txtProvince"/>
+
+        <TextView
+            android:id="@+id/txtBarangay"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/fjalla_one"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textSize="15sp"
+            android:textColor="#e1ad01"
+            android:text="Heyfdafadf: "
+            android:layout_below="@+id/txtAddress"
+            android:layout_toRightOf="@+id/txtCity"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/btnEdit"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#e1ad01"-->
+<!--            android:text="EDIT"-->
+<!--            android:layout_below="@+id/txtRegion"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_toRightOf="@+id/txtBarangay" />-->
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
